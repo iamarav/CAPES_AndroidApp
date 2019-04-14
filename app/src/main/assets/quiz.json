@@ -1,0 +1,95 @@
+{
+  "questions":[
+  {
+    "id": "1",
+    "Question": "Who was the father of computer?",
+    "Ans1": "Charlie Babbage",
+    "Ans2": "Dennis Ritchie",
+    "Ans3": "Charles Babbage",
+    "Ans4": "Ken Thompson",
+    "correct": "Charles Babbage"
+  },
+  {
+    "id": "2",
+    "Question": "What is the full form of ALU?",
+    "Ans1": "Arithmetic Logic Unit",
+    "Ans2": "Arithmetic Local Unit",
+    "Ans3": "Advance Logical Unit",
+    "Ans4": "None of these",
+    "correct": "Arithmetic Logic Unit"
+  },
+  {
+    "id": "3",
+    "Question": "Which is the correct name of a variable?\n(A) -var (B) var-1 (C) _var (D) var_1",
+    "Ans1": "Only (A)",
+    "Ans2": "Only (B)",
+    "Ans3": "Both (A) and (B)",
+    "Ans4": "Both (C) and (D)",
+    "correct": "Both (C) and (D)"
+  },
+  {
+    "id": "4",
+    "Question": "What type of declaration is it? \n unsigned num;",
+    "Ans1": "num is an unsigned integer.",
+    "Ans2": "num is an unsigned character.",
+    "Ans3": "num is an unsigned float",
+    "Ans4": "It’s an invalid declaration.",
+    "correct": "num is an unsigned integer."
+  },
+  {
+    "id": "5",
+    "Question": "Which statement does not require semicolon?",
+    "Ans1": "goto xyz",
+    "Ans2": "int x=20",
+    "Ans3": "#define MAX 1000",
+    "Ans4": "do{ ... }while(count<=100)e",
+    "correct": "#define MAX 1000"
+  },
+  {
+    "id": "6",
+    "Question": "INSERT, UPDATE and DELETE statements belong to",
+    "Ans1": "DQL Language",
+    "Ans2": "DDL Language",
+    "Ans3": "DCL Language",
+    "Ans4": "DML Language",
+    "correct": "DML Language"
+  },
+  {
+    "id": "7",
+    "Question": "What is Schema?",
+    "Ans1": "To identify the record uniquely",
+    "Ans2": "To normalize the database",
+    "Ans3": "Overall description of the database",
+    "Ans4": "To reduce data redundancy",
+    "correct": "Overall description of the database"
+  },
+  {
+    "id": "8",
+    "Question": " Which module gives control of the CPU to the process selected by the short-term scheduler?",
+    "Ans1": "dispatcher",
+    "Ans2": "interrupt",
+    "Ans3": "scheduler",
+    "Ans4": "None of these",
+    "correct": "dispatcher"
+  },
+  {
+    "id": "9",
+    "Question": "Which one of the following can not be scheduled by the kernel?",
+    "Ans1": "kernel level thread",
+    "Ans2": "user level thread",
+    "Ans3": "none of the mentioned",
+    "Ans4": "process",
+    "correct": "user level thread"
+  },
+  {
+    "id": "10",
+    "Question": "Process are classified into different groups in",
+    "Ans1": "shortest job scheduling algorithm",
+    "Ans2": " round robin scheduling algorithm",
+    "Ans3": "priority scheduling algorithm",
+    "Ans4": "multilevel queue scheduling algorithm",
+    "correct": "multilevel queue scheduling algorithm"
+  }
+
+]
+}

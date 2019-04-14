@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue as"
+            android:shadowColor="#000"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10sp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User"
+                android:id="@+id/choose_user"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:padding="5sp"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Corporate"
+                android:id="@+id/choose_corporate"
+            android:background="@color/colorAccent2"
+            android:textColor="#fff"
+
+            android:padding="5sp"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

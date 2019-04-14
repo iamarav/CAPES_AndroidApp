@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".U_QuizActivity"
+    tools:showIn="@layout/activity_u__quiz">
+
+    <ScrollView
+        android:padding="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quiz_question"
+                android:text="Sample Question"
+                android:textColor="#000"
+                android:textSize="30sp"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup1">
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quiz_ans_1"
+                    android:text="Sample Answer 1"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quiz_ans_2"
+                    android:text="Sample Answer 2"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quiz_ans_3"
+                    android:text="Sample Answer 3"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quiz_ans_4"
+                    android:text="Sample Answer 4"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    />
+
+
+            </RadioGroup>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submit_ans"
+                    android:text="Submit"
+                    />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

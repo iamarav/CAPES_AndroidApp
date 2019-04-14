@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dozyapps.capes">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".U_QUIZ_Verify"></activity>
+        <activity
+            android:name=".U_QuizActivity"
+            android:label="@string/title_activity_u__quiz"
+
+            android:parentActivityName=".U_MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dozyapps.capes.U_MainActivity" />
+        </activity>
+        <activity android:name=".FirstActivityApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".U_MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".U_SignUpActivity" />
+        <activity
+            android:name=".U_ProfileActivity"
+            android:label="CAPES"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".U_ForgetPasswordActivity" />
+        <activity
+            android:name=".U_EditProfile"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".U_ShowProfile" />
+        <activity android:name=".U_ApplyJob" />
+        <activity android:name=".U_AppliedJob" />
+        <activity android:name=".U_ShowVideoCv" />
+        <activity android:name=".C_MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".C_SignUpActivity" />
+        <activity android:name=".C_ForgetPasswordActivity" />
+        <activity
+            android:name=".C_ProfileActivity"
+            android:label="CAPES Corporate"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".C_UploadJob" />
+        <activity android:name=".C_CandidateProfile" />
+        <activity android:name=".C_ShowVideoCv" />
+        <activity android:name=".C_PostedJob" />
+        <activity android:name=".C_AppliedCandidates" />
+    </application>
+
+</manifest>
