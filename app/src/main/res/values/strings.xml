@@ -13,4 +13,6 @@
     <string name="welcome">Welcome to CAPES</string>
     <string name="title_activity_u__quiz">Start Quiz</string>
     <string name="quiz_verify_before_start">Please verify that you cannot escape quiz once you started.</string>
+    <string name="title_activity_quiz_verify">Quiz</string>
+    <string name="title_activity_u__quiz__new__def__text">Quiz</string>
 </resources>

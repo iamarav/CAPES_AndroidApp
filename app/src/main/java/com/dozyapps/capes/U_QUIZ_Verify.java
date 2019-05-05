@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class U_QUIZ_Verify extends AppCompatActivity {
 
@@ -19,7 +20,8 @@ public class U_QUIZ_Verify extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), U_QuizActivity.class));
+                startActivity(new Intent(getApplicationContext(), U_Quiz.class));
+                Toast.makeText(U_QUIZ_Verify.this, "Starting Quiz", Toast.LENGTH_SHORT).show();
             }
         });
 

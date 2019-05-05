@@ -12,12 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".U_QUIZ_Verify"></activity>
+        <activity android:name=".U_Quiz"
+            android:label="@string/title_activity_u__quiz__new__def__text"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+
+            >
+
+        </activity>
+        <!--<activity-->
+            <!--android:name=".U_Quiz_New_Def_Text"-->
+            <!--android:label="@string/title_activity_u__quiz__new__def__text"-->
+            <!--android:theme="@style/AppTheme.NoActionBar" />-->
+        <!--<activity android:name=".U_QuizActivity_New" />-->
+        <activity
+            android:name=".U_QUIZ_Verify"
+            android:label="@string/title_activity_quiz_verify"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".U_QuizActivity"
             android:label="@string/title_activity_u__quiz"
-
             android:parentActivityName=".U_MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

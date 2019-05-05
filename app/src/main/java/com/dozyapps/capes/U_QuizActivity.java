@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -24,6 +25,9 @@ public class U_QuizActivity extends AppCompatActivity {
     int count=0;
     JSONObject obj;
     JSONArray jsonArray;
+    boolean flag=false;
+    int i=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,12 +64,20 @@ public class U_QuizActivity extends AppCompatActivity {
         try {
             obj = new JSONObject(readJSONFromAsset());
             jsonArray = (JSONArray) obj.getJSONArray("questions");
-            final int temp;
+            //final int temp;
 
            // while (obj.length()!=0) {
-                for (int i = 0; i<jsonArray.length();i++){
+               // for (int i = 0; i<jsonArray.length();i++){
+                loop:
+                while(i<jsonArray.length()){
+
+
 
                 JSONObject json_data = jsonArray.getJSONObject(i);
+
+                    Log.d("JSON_DATA_DEBUG_CAPES", "DATA: "+json_data);
+
+                flag=false;
 
                 int id= json_data.getInt("id");
                 String ques= json_data.getString("Question");
@@ -80,7 +92,12 @@ public class U_QuizActivity extends AppCompatActivity {
                 r2.setText(ans2);
                 r3.setText(ans3);
                 r4.setText(ans4);
+                    Log.d("Quiz", "HIIIIIIIIIIIIIII "+correctAns);
 
+              //  while (flag==false){
+                    Log.d("Quiz", "Flag is false"+correctAns);
+
+//                    if (button.isClick)
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -91,20 +108,31 @@ public class U_QuizActivity extends AppCompatActivity {
                         radioButton = (RadioButton) findViewById(cAns);
 //                        String stringcAns = radioGroup.getChildAt(cAns);
                         String stringcAns = (String) radioButton.getText();
+                        Log.d("Quiz", "Correct Ans"+correctAns);
                         if (stringcAns.equals(correctAns))
                         {
+                            Log.d("Quiz", "Answer: "+stringcAns);
+                            Log.d("Quiz", "Correct");
                             count++;
                             Toast.makeText(U_QuizActivity.this, "Correct", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
+                            Log.d("Quiz", "Not Correct");
                             Toast.makeText(U_QuizActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
                         }
+                        i++;
+
                         Toast.makeText(U_QuizActivity.this, stringcAns, Toast.LENGTH_SHORT).show();
                     }
                 });
+                        flag=true;
 
-            }
+               // }
+
+                continue loop;
+                }
+                //}
             Toast.makeText(this, "Total Marks: "+getMarks(), Toast.LENGTH_SHORT).show();
            // if (correctAns.equals(radioGroup.getTransitionName()));
 
@@ -115,6 +143,12 @@ public class U_QuizActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
 
     public String readJSONFromAsset() {
         String json = null;
@@ -132,6 +166,7 @@ public class U_QuizActivity extends AppCompatActivity {
         return json;
     }
 
+
     @Override
     public void onBackPressed() {
 
@@ -141,6 +176,8 @@ public class U_QuizActivity extends AppCompatActivity {
         //super.onBackPressed();
     }
 
+
+
     public int getMarks(){
         return count;
     }
@@ -149,5 +186,11 @@ public class U_QuizActivity extends AppCompatActivity {
 
         return null;
     }
+
+    public void endQuiz(){
+
+    }
+
+
 
 }
